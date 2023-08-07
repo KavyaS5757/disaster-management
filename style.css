@@ -1,0 +1,1175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    background-color: var(--primary-white);
+  }
+  
+  body {
+    max-width: 100%;
+    overflow-y: scroll;
+}
+
+/* The Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.wrapper {
+  position: relative;
+}
+  
+  .splash-screen {
+  position: abs; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1068c0; /* Customize the background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the splash screen appears above other content */
+  animation: fadeInOut 2s forwards; /* Apply fade-in and fade-out animation */
+  }
+  
+  .splash-screen h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #fff; /* Customize the text color */
+    text-transform: uppercase;
+  }
+  
+  .splash-screen p {
+    font-size: 24px;
+    cursor: pointer;
+    color: #f1c40f; /* Customize the link text color */
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Style the link on hover */
+  .splash-screen p:hover {
+    color: #e67e22; /* Customize the link text color on hover */
+  }
+  /* .main-content {
+    display: none;
+  }
+   */
+  header {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: black;
+    z-index: 1;
+  }
+  /* .heading ul {
+    display: flex;
+  } */
+
+  
+  .logo a {
+    color: white;
+    transition-duration: 1s;
+    font-weight: 800;
+  }
+  .logo a:hover {
+    cursor: pointer;
+    color: rgb(240, 197, 6);
+    transition-duration: 2s;
+  }
+  .heading ul li {
+    list-style: none;
+  }
+  .heading ul li a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 18px;
+    transition-duration: 1s;
+  }
+  .heading ul li a:active {
+    color: red;
+  }
+  .heading ul li a:hover {
+    color: rgb(243, 168, 7);
+    transition-duration: 1s;
+  }
+  
+  .heading ul li a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+  .heading ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
+  }
+  #input {
+    height: 30px;
+    width: 300px;
+    text-decoration: none;
+    border: 0px;
+    padding: 5px;
+  }
+  .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+  }
+   ion-icon:hover {
+    cursor: pointer;
+  } 
+  .search a {
+    display: flex;
+  }
+  header a ion-icon {
+    position: relative;
+    right: 3px;
+  }
+  
+  .img-slider img {
+    height: 1000px;
+    width: 1080px;
+  }
+  @keyframes slide {
+    0% {
+      left: 0px;
+    }
+    15% {
+      left: 0px;
+    }
+    20% {
+      left: -1080px;
+    }
+    32% {
+      left: -1080px;
+    }
+    35% {
+      left: -2160px;
+    }
+    47% {
+      left: -2160px;
+    }
+    50% {
+      left: -3240px;
+    }
+    63% {
+      left: -3240px;
+    }
+    66% {
+      left: -4320px;
+    }
+    79% {
+      left: -4320px;
+    }
+    82% {
+      left: -5400px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+  .img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 1080px;
+    height: 500px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+  }
+  
+  .heading1 {
+    opacity: 0;
+  }
+  .search {
+    display: flex;
+    position: relative;
+  }
+  .section1 {
+    width: 1080px;
+    overflow: hidden;
+  
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+  
+  .section2 .container {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  .section2 .container .items {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 12px;
+  }
+  .section2 .container .items .name {
+    text-align: center;
+    background-color: rgb(240, 197, 6);
+    height: 25px;
+    padding-top: 4px;
+    color: white;
+    margin: 0;
+  }
+  .section2 .container .items .price {
+    float: left;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    font-weight: 650;
+  }
+  .section2 .container .items .info {
+    padding-left: 10px;
+    color: rgb(243, 168, 7);
+  }
+  .section2 .container .items .img img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    transition-duration: 0.8s;
+  }
+  .section2 .container .items .img {
+    overflow: hidden;
+    margin: 0;
+  }
+  .section2 .container .items:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+    border-radius: 12px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    color: white;
+  }
+  
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+  }
+  .social-media a ion-icon {
+    color: white;
+    background-color: black;
+  }
+  .social-media a:hover ion-icon {
+    color: red;
+    transform: translateY(5px);
+  }
+  .footer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+  }
+  .footer0 {
+    font-weight: 1200;
+    transition-duration: 1s;
+  }
+  .footer0:hover {
+    color: rgb(243, 168, 7);
+  }
+  .footer2 .heading {
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer2 .heading:hover {
+    color: rgb(243, 168, 7);
+  }
+  .footer2 .div:hover {
+    transform: scale(1.05);
+  }
+  .footer3 h4 {
+    margin: 0 10px;
+  }
+  .footer2 div {
+    margin: 10px;
+  }
+  .menu {
+    visibility: hidden;
+  }
+  .heading1 .ham:active {
+    color: red;
+  }
+  .items {
+    overflow: hidden;
+  }
+  /* .ham,
+  .close {
+    cursor: pointer;
+  } */
+  
+  @media screen and (max-width: 1250px) {
+    .heading ul li {
+      display: none;
+    }
+  
+    .items {
+      transform: scale(0.9);
+    }
+    .img-slider img {
+      height: 60vw;
+      width: 80vw;
+    }
+    .ham:active {
+      color: red;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu a ion-icon {
+      position: absolute;
+    }
+  
+    @keyframes slide1 {
+      0% {
+        left: 0vw;
+      }
+      15% {
+        left: 0vw;
+      }
+      20% {
+        left: -80vw;
+      }
+      32% {
+        left: -80vw;
+      }
+      35% {
+        left: -160vw;
+      }
+      47% {
+        left: -160vw;
+      }
+      50% {
+        left: -240vw;
+      }
+      63% {
+        left: -240vw;
+      }
+      66% {
+        left: -320vw;
+      }
+      79% {
+        left: -320vw;
+      }
+      82% {
+        left: -400vw;
+      }
+      100% {
+        left: 0vw;
+      }
+    }
+    .menu ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      left: 0;
+      top: 0;
+      z-index: 11;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+    .close {
+      z-index: 34;
+  
+      color: white;
+      background-color: black;
+    }
+    .close:active {
+      color: red;
+    }
+    .menu ul li {
+      list-style: none;
+      margin: 20px;
+      border-top: 3px solid white;
+      width: 80%;
+      text-align: center;
+  
+      padding-top: 10px;
+    }
+    .menu ul li a {
+      text-decoration: none;
+      padding-top: 10px;
+      color: white;
+      font-weight: 900;
+    }
+    .menu ul li a:hover {
+      color: rgb(240, 197, 6);
+    }
+    .img-slider {
+      display: flex;
+      float: left;
+      position: relative;
+      width: 80%;
+      height: 60%;
+      animation-name: slide1;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      transition-duration: 2s;
+    }
+    .section1 {
+      width: 80%;
+      overflow: hidden;
+  
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto;
+    }
+  
+    .heading1 {
+      opacity: 1;
+      position: relative;
+      bottom: 8px;
+    }
+    .search a {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  
+    .heading1 .ham {
+      background-color: black;
+      color: white;
+    }
+    #input {
+      width: 200px;
+      flex-shrink: 2;
+    }
+    header {
+      height: 150px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .heading ul li {
+      display: none;
+    }
+    .heading1 {
+      opacity: 1;
+  
+      bottom: 8px;
+    }
+  
+    header {
+      height: 250px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+    }
+    #input {
+      width: 150px;
+    }
+    .close {
+      z-index: 34;
+    }
+  
+    .search a {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  /* article, aside, footer, header, nav, section {
+    display: block;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    
+    margin: 0;
+    padding: 0;
+}
+
+style attribute {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #000;
+    background: #ffffff;
+}
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+element.style {
+    font-size: 18px;
+    background: #fcc238;
+    border-bottom: solid 1px gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    border-color: gray;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+   
+}
+
+div {
+    display: block;
+}
+
+element.style {
+    height: 80px;
+    
+}
+
+.marquee {
+    overflow: hidden;
+    margin: 15px 0 0 0;
+}
+
+style attribute {
+    font-size: 100%;
+}
+
+element.style {
+    transform: translateY(0px);
+    animation: 18s linear 1s infinite normal none running marqueeAnimation-6578829;
+}
+
+element.style {
+    border-bottom: solid 1px #b4b4b4;
+}
+
+.cmf-right-news {
+    position: relative;
+    border-radius: 5px;
+    border: solid 1px #b4b4b4;
+    border-bottom: solid 1px #b4b4b4;
+    padding-bottom: 5px;
+}
+* {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+style attribute {
+    font-size: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #000;
+    font-size: 14px;
+    background: #ffffff;
+}
+html {
+    line-height: 1.15;
+    /* -ms-text-size-adjust: 100%; */
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    font-family: sans-serif;
+    /* -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; */
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+element.style {
+    font-size: 18px;
+    background: #fcc238;
+    border-bottom: solid 1px gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    border-color: gray;
+    padding: 10px 10px 10px 10px;
+}
+* {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+style attribute {
+    font-size: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #000;
+    font-size: 14px;
+    background: #ffffff;
+}
+html {
+    line-height: 1.15;
+    /* -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; */
+}
+
+
+#ticker-container {
+    overflow: hidden;
+    height: 500px; /* Adjust the height as needed */
+  }
+  
+  #ticker {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    animation: tickerAnimation 15s linear infinite;
+  }
+  
+  #ticker li {
+    line-height: 40px; /* Should match the height of the ticker-container */
+  }
+
+  @keyframes tickerAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%); /* Adjust the percentage based on the number of news items */
+    }
+}
+  
+#ticker a {
+    color: #000;
+    text-decoration: none;
+    padding: 0 10px;
+    /* display: block; */
+  }
+  
+
+  .new-notification {
+    background-color: #fff;
+    color: #ffffff;
+    padding: 2px 5px;   
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  .sparkling-light {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .sparkling-light::before {
+    content: "";
+    position: relative;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparklingAnimation 1s linear infinite;
+  }
+  
+  @keyframes sparklingAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    } 
+  }
+  
+  .column-container {
+    margin: 10px;
+    width: 100px;
+    height: 300px;
+    
+    background-color: white;
+    text-align: center;
+    background-color: rgb(240, 197, 6);
+    height: 25px;
+    padding-top: 4px;
+    color: white;
+    margin: 0;
+float: left;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    font-weight: 650;
+  }
+  .quicktabs-accordion {
+    
+    bottom: 0;
+    background-color: #fff; /* Optional: Set the background color for the fixed sections */
+  }
+
+  .NDMA-tab {
+    background-color: #f5f5f5; /* Light gray background color */
+    padding: 10px; /* Add padding to create space between content and boundary */
+  }
+  
+  /* Style for links inside .NDMA-tab */
+  .NDMA-tab a {
+    display: block;
+    color: #0066cc; /* Blue link color */
+    text-decoration: none;
+    margin-bottom: 5px; /* Add some spacing between links */
+    transition: color 0.2s ease; /* Smooth color transition on hover */
+  }
+  
+  .NDMA-tab a:hover {
+    color: #ff9900; /* Change link color on hover to orange */
+  }
+  
+  /* Style for the "What's New" section with the "NEW" notification */
+  .cmf-right-news {
+    border-bottom: solid 1px #b4b4b4;
+    margin-bottom: 15px; /* Add some spacing between sections */
+  }
+  
+  .cmf-right-news .new-notification {
+    background-color: #ff0000; /* Red background for "NEW" notification */
+    color: #fff; /* White text color for "NEW" notification */
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  /* Sparkling effect for "NEW" notification (assuming you've already added the JavaScript for the sparkling effect) */
+  .cmf-right-news .new-notification.sparkling-light::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #00f, #f00, #0f0, #ff0, #f0f, #0ff); /* Mix of colors for sparkling effect */
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparklingAnimation 1s linear infinite;
+  }
+  
+  /* Additional styling for the "What's New" section */
+  .cmf-right-news h2 {
+    font-size: 18px;
+    background: #fcc238;
+    border-bottom: solid 1px gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    border-color: gray;
+    padding: 10px;
+  }
+  
+  /* Styling for the "Reference Material" and "Workshop/Conference" sections */
+  .quicktabs-accordion {
+    background-color: #f5f5f5; /* Light gray background color for the fixed sections */
+    padding: 10px; /* Add padding to the fixed sections */
+  }
+  
+  /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Add a black background color to the top navigation */
+ .topnav {
+  background-color: #333;
+  overflow: hidden;
+  cursor: pointer;
+} 
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(152, 8, 8);
+  
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+a.back-to-top {
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+a.back-to-top.show {
+  display: block;
+}
+
+/* Style the link on hover */
+a.back-to-top:hover {
+  background: #e67e22; /* Customize the link background color on hover */
+}
+
+/* p {
+  font-size: 25px;
+}
+
+/* remove the below if you don't want smooth scrolling */
+/* html,
+body {
+	scroll-behavior: smooth;
+} */ 
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cylindrical-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cylindrical-image {
+  width: 300px;
+  height: 300px; /* Adjust the height based on your image's aspect ratio */
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.cylindrical-image-container:hover .cylindrical-image {
+  transform: scale(1.1);
+}
+
+.awareness-programs {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.video {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  animation: moveVideos 10s linear infinite;
+}
+
+@keyframes moveVideos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.33% * 2)); /* Adjust the percentage based on the number of videos */
+  }
+}
+/* CSS */
+
+/* Center the form and result container */
+#location-form {
+  text-align: center;
+}
+
+#result-container {
+  text-align: center;
+}
+
+/* Style the labels */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Style the input fields */
+input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* CSS for responsive design */
+
+/* Adjust form width for smaller screens */
+@media screen and (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+/* CSS for disabled input fields */
+
+input:disabled {
+  background-color: #f2f2f2;
+  color: #666;
+  cursor: not-allowed;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assistance Results</title>
+</head>
+<body>
+    <h1>Assistance Results</h1>
+    {% if places %}
+        <p>Great! There are a few places related to '{{ search_term }}' near {{ location }}:</p>
+        <ul>
+            {% for place in places %}
+                <li>
+                    <strong>Name:</strong> {{ place['display_name'] }}<br>
+                    <strong>Latitude:</strong> {{ place['lat'] }}<br>
+                    <strong>Longitude:</strong> {{ place['lon'] }}<br>
+                    <strong>Type:</strong> {{ place['type'] }}<br>
+                    <strong>Class:</strong> {{ place['class'] }}<br>
+                    <!-- Add more attributes as needed -->
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>I'm sorry, but it looks like we couldn't find any relevant '{{ search_term }}' near your location.</p>
+    {% endif %}
+</body>
+</html>
